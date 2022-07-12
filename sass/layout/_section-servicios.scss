@@ -1,0 +1,63 @@
+@import "../base/margin--padding";
+#servicios{
+    background-color: #F1F9FF;
+    padding: 15px;
+
+}
+
+.container_card{
+    display: flex;
+    flex-direction: column;
+   
+    margin: 25px;
+    gap:10px;
+}
+
+@media screen and (min-width: 768px){ 
+    .container_card{
+         
+         display: grid;
+         grid-template-columns:  1fr 1fr;
+         grid-template-rows: 1fr 1fr ;
+        
+         gap: 15px;
+     }
+ }
+
+@media screen and (min-width: 1024px) { 
+   .container_card{
+      
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1024px) { 
+    #servicios {  
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: max-content max-content max-content;
+        gap: 25px 0px;
+        grid-auto-flow: row;
+        justify-content: stretch;
+        align-content: stretch;
+        justify-items: stretch;
+        align-items: stretch;
+        grid-template-areas:
+          ". . titulo titulo titulo titulo titulo titulo titulo . ."
+          ". container_card container_card container_card container_card container_card container_card container_card container_card container_card ."
+          ". . boton--container boton--container boton--container boton--container boton--container boton--container boton--container . .";
+      }
+      
+      .titulo { grid-area: titulo; }
+      
+      .container_card { grid-area: container_card; }
+      
+      .boton--container { grid-area: boton--container; }
+      
+      
+ }

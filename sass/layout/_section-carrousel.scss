@@ -1,0 +1,15 @@
+
+$margin:35px;
+
+.carrousel{
+    margin: $margin;
+}
+
+@media screen and (min-width: 768px){
+    .carrousel{  
+        width: 754px;
+        height: auto;
+       margin: $margin auto;
+ 
+    }
+}
